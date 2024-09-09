@@ -13,8 +13,15 @@ O arquivo config.yaml é utilizado para especificar a amostra de dados no
 formato .raw e definir as variáveis de interesse. O formato do arquivo é
 o seguinte:
 
-data: dado_de_interesse.raw variables: signal: Signal (mV) drive: Drive
-(Oe) frequency: Frequency (Hz) bin: Bin images: TRUE
+``` yaml
+data: dado_de_interesse.raw
+variables:
+    signal: Signal (mV)
+    drive: Drive (Oe)
+    frequency: Frequency (Hz)
+    bin: Bin
+    images: TRUE
+```
 
 - data: Nome do arquivo de dados bruto (.raw) que será analisado.
 
