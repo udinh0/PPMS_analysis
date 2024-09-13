@@ -1,7 +1,7 @@
-data: Xac-time_300K_2point_microfios-FeSiB_hac_10Oe_f_10Hz_26-04-24.raw
+data: 300k5p
 variables:
     "signal": Signal (mV)
     "drive":  Drive (Oe)
     "frequency": Frequency (Hz)
     "bin": Bin
-    "images": FALSE
+    "images": F

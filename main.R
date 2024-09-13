@@ -6,7 +6,7 @@ source("R/script.R")
 source("R/densidades.R")
 
 config = read_yaml("config.yaml")
-dados = read_csv(glue("dados/{config$data}"), skip = 19, show_col_types = F)
+dados = read_csv(glue("dados/{config$data}.raw"), skip = 19, show_col_types = F)
 
 df = func(drive = dados %>% select(config$variables$drive) %>% pull(),
           signal = dados %>% select(config$variables$signal) %>% pull(),
@@ -16,5 +16,5 @@ df = func(drive = dados %>% select(config$variables$drive) %>% pull(),
 
 densidades(df)
 
-write.xlsx(df, "resultados/results.xlsx")
+write.xlsx(df, glue("resultados/{config$data}/results.xlsx"))
 
