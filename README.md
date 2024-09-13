@@ -14,7 +14,7 @@ formato .raw e definir as variáveis de interesse. O formato do arquivo é
 o seguinte:
 
 ``` yaml
-data: dado_de_interesse.raw
+data: dado_de_interesse
 variables:
     signal: Signal (mV)
     drive: Drive (Oe)
