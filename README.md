@@ -20,7 +20,7 @@ variables:
     drive: Drive (Oe)
     frequency: Frequency (Hz)
     bin: Bin
-    images: TRUE
+    histereses: TRUE
 ```
 
 - data: Nome do arquivo de dados bruto (.raw) que será analisado.
