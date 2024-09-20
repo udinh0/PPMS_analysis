@@ -1,6 +1,6 @@
 densidades = function(df) {
-  for (i in 1:3){
-    df_i = df %>% filter(frequency == df$frequency[i])
+  for (j in 1:3){
+    df_i = df %>% filter(frequency == df$frequency[j])
     densidade_min = density(df_i$drive_min)
     densidade_max = density(df_i$drive_max)
     densidade_df = data.frame(x_min = densidade_min$x, 
@@ -22,8 +22,8 @@ densidades = function(df) {
       labs(x = "Drive esquerdo", 
            y = "Total", 
            title = "Densidade - Drive esquerdo", 
-           subtitle = glue("Frequência: {df$frequency[i]}"), 
-           caption = glue("Amostra: {config$data}"))
+           subtitle = glue("Frequência: {df$frequency[j]}"), 
+           caption = glue("Amostra: {i}"))
     
     g2 = densidade_df %>% 
       ggplot(aes(x = x_max, y = y_max)) +
@@ -34,11 +34,11 @@ densidades = function(df) {
       labs(x = "Drive Direito", 
            y = "Total", 
            title = "Densidade - Drive Direito", 
-           subtitle = glue("Frequência: {df$frequency[i]}"), 
-           caption = glue("Amostra: {config$data}"))
+           subtitle = glue("Frequência: {df$frequency[j]}"), 
+           caption = glue("Amostra: {i}"))
     
     
-    ggsave(glue("resultados/{config$data}/densidades/den_esquerdo{i}.png"), plot = g1, create.dir = T)
-    ggsave(glue("resultados/{config$data}/densidades/den_direito{i}.png"), plot = g2)
+    ggsave(glue("resultados/{i}/densidades/den_esquerdo{j}.png"), plot = g1, create.dir = T)
+    ggsave(glue("resultados/{i}/densidades/den_direito{j}.png"), plot = g2)
   }
 }
