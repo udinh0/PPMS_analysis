@@ -17,7 +17,7 @@ densidades = function(df) {
       ggplot(aes(x = x_min, y = y_min)) +
       geom_line() +
       annotate("text", x = -Inf, y = Inf, 
-               label = glue("Média: {round(mean_min, 2)}\nDesvio Padrão: {round(sd_min, 2)}"),
+               label = glue("Média: {round(mean_min, 6)}\nDesvio Padrão: {round(sd_min, 6)}"),
                hjust = 0, vjust = 1, color = "black", size = 4) +
       labs(x = "Drive esquerdo", 
            y = "Total", 
@@ -29,7 +29,7 @@ densidades = function(df) {
       ggplot(aes(x = x_max, y = y_max)) +
       geom_line() +
       annotate("text", x = -Inf, y = Inf, 
-               label = glue("Média: {round(mean_max, 2)}\nDesvio Padrão: {round(sd_max, 2)}"),
+               label = glue("Média: {round(mean_max, 6)}\nDesvio Padrão: {round(sd_max, 6)}"),
                hjust = 0, vjust = 1, color = "black", size = 4) +
       labs(x = "Drive Direito", 
            y = "Total", 

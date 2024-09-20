@@ -1,4 +1,4 @@
-data: 5k2p 5k5p 150k2p 150k5p 200k2p 250k2p 300k2p 300k5p
+data: 5k2p 5k5p 150k2p 150k5p 200k2p 200k5p 250k2p 250k5p 300k2p 300k5p
 variables:
     "signal": Signal (mV)
     "drive":  Drive (Oe)

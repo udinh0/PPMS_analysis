@@ -31,7 +31,7 @@ func = function(drive, signal, bin, frequency, images = FALSE) {
         geom_point() +
         geom_path(linewidth = 2) +
         geom_hline(yintercept = 0, lty = 2, col = "red") +
-      labs(title = paste("Histerese", sep = " ", i, "Frequência =", frequency_tmp[1]))
+      labs(title = paste("Histerese", sep = " ", i, "Frequência =", frequency_tmp[1]), caption = glue("Amostra: {i}"))
       ggsave(paste(glue("resultados/{config$data}/histereses/histerese"), sep = "", i, ".png"), plot = g, create.dir = T, width = 7, height =  7)
       graphics.off()
     }
